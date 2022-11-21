@@ -4,13 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "cucumber-js"
+    "test": "mocha test && cucumber-js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@cucumber/cucumber": "^8.8.0",
-    "hamjest": "^3.7.3"
+    "@cucumber/cucumber": "latest",
+    "hamjest": "latest",
+    "mocha": "latest",
+    "sinon": "latest"
   }
 }
