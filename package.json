@@ -4,13 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test && cucumber-js"
+    "test": "mocha test && cucumber-js -f @cucumber/pretty-formatter"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@cucumber/cucumber": "latest",
+    "@cucumber/pretty-formatter": "latest",
     "hamjest": "latest",
     "mocha": "latest",
     "sinon": "latest"

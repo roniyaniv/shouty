@@ -12,10 +12,16 @@ describe('Person', () => {
     networkStub = sinon.spy(network)
   })
 
-  it('it subscribes to the network', () => {
-    const lucy = new Person(network)
+  it('subscribes to the network', () => {
+    const lucy = new Person(network, 100)
     assert(networkStub.subscribe.calledOnce)
     assert.strictEqual(networkStub.subscribe.getCall(0).args[0], lucy)
+  })
+
+  it('has a location', () => {
+    const location = 100
+    const lucy = new Person(network, location)
+    assert.strictEqual(lucy.location, location)
   })
 
   it('broadcasts shouts to the network', () => {
